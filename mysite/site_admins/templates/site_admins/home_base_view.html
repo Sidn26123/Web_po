@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block navbar_block %}
+	<div class = "navbr">
+		<ul class = "navbar-item-list">
+			<li class = navbar-item-list__item id = "logo">
+				<img>
+				<a href="{% url 'site_admin:home_admin' %}">Logo</a>
+			</li>
+			<li class = navbar-item-list__item>
+				<a href="{% url 'site_admin:home_admin' %}">Bệnh nhân</a>
+			</li>
+			<li class = navbar-item-list__item>
+				<a href="">Bác sĩ</a>
+			</li>
+			<li class = navbar-item-list__item>
+				<a href="">Tài chính</a>
+			</li>
+			<li class = navbar-item-list__item>
+				<a href="">Tổng quát</a>
+			</li>
+			<li class = navbar-item-list__item>
+				<a href="">Tin nhắn</a>
+			</li>
+		</ul>
+		<ul class="navbar-item-list">
+			<li class="navbar-item-list__item"></li>
+			<li class="navbar-item-list__item">
+				<i class="fa-regular fa-bell"></i>
+			</li>
+			<li class="navbar-item-list__item"></li>
+		</ul>
+	</div>
+
+{% endblock navbar_block %}
+
+{% block main_content %}
+{% endblock main_content %}

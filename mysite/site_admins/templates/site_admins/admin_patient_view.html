@@ -1,0 +1,66 @@
+{% extends 'site_admins/home_base_view.html' %}
+
+{% block main_content %}
+    <div class ="content">
+        <div class="search-filter">
+            <div class="search-filter__item">
+                <p>Tuổi</p>
+            </div>
+            <div class="search-filter__item">
+                <p>Tỉnh thành</p>
+            </div>
+        </div>
+        <div class="patient-wrapper">
+            <div class="patient-wrapper__header">
+                <h3>Bệnh nhân</h3>
+                <div>
+                    <p class="line"></p>
+                    <div class="order-filter-box">
+                        <ul class="dropdown-box">
+                            <li>A</li>
+                            <li>B</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="patient-wrapper__sum-patient">
+                    A
+                </div>
+            </div>
+            <div class="patient-list">
+                {% for patient in page_results %}
+                    <div class="patient-list__item">
+                        {{patient}}
+                    </div>
+                {% endfor %}
+            </div>
+
+            <!-- <div class="page-counters" onclick="toggleActive(this)">0</div> -->
+
+            <div class="patient-wrapper__footer">
+                <div class="show-page">
+                    <span> / {{result_counter}} trang</span>
+                </div>
+                <div class="choose-number-box">
+                </div>
+                <div class="direct-page-block">
+                    <!-- Button nhấn vào để tiến trang kế -->
+                    <button class="btn back-btn" onclick = "move_next_page()">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <ul>
+                        {% for page_num in page_range %}
+                            <!-- Neu so trang hien tai trùng với số trang trong <li> thi se css trang trùng do len z (áp dung class active)
+                                Số trang được xác định = page_obj.number, page_obj = paginator.get_page()-->
+                            <a class ="page-num {% if page_results.number == page_num %}active{% endif %}" href="?page={{page_num}}">{{page_num}}</a>
+                            
+                        {% endfor %}
+                    </ul>
+                    <button class = "btn next-btn">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock main_content%}

@@ -1,0 +1,86 @@
+
+.navbr{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #808096;
+	height: 40px;
+}
+.navbar-item-list{
+	padding: 0px 15px 0px 15px;
+	margin: 0;
+}
+.navbar-item-list__item{
+	display: inline-block;
+	padding: 0px 10px 0px 10px;
+
+}
+.navbar-item-list__item a{
+	font-size: 1.5rem;
+	font-weight: 400;
+	margin: 0;
+	color: black;
+}
+.test{
+	display: flex;
+	justify-content: space-between;
+}
+
+.patient-list{
+	background-color: rgb(33, 151, 112);
+	height: 70vh;
+	width: calc(100% - 400px);
+}
+.content{
+	display: flex;
+	justify-content: space-between;
+}
+
+.search-filter{
+	position: relative;
+	height: calc(100vh-40px);
+	width: 250px;
+	background-color: rgba(39, 39, 97, 0.781);
+}
+
+.patient-wrapper{
+	height: calc(100vh - 50px);
+	width: calc(100% - 200px);
+	background-color: rgba(33, 33, 235, 0.253);
+}
+.patient-wrapper__header{
+	display: flex;
+	justify-content: space-between;
+}
+
+.patient-wrapper__header h3{
+	display: block;
+}
+
+.page-counter{
+	height: 30px;
+	width: 50px;
+	background-color: rgb(124, 124, 124);
+	transition: background-color 0.2s ease;
+	cursor: pointer;
+}
+
+.active{
+	background-color: black;
+}
+/* .page-counter:active{
+	background-color: rgb(39, 39, 30);
+}
+.page-counter:hover{
+	background-color: rgb(82, 82, 78);
+} */
+.direct-page-block{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 120px;
+}
+
+.direct-page-block ul{
+	padding: 0;
+}
